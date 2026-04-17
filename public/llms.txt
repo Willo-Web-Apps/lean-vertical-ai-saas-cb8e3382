@@ -1,0 +1,20 @@
+# Your New Business
+
+> URL: https://lean-vertical-ai-saas.onrender.com
+
+> Build a lean vertical AI SaaS for HVAC/plumbing/electrical businesses that automates lead qualification, estimate drafting, scheduling, technician note-to-invoice workflows, payment follow-up, and weekly owner reporting. Optimize for fastest path to paying customers, lowest build cost, highest gross margin, and minimum custom work. Use existing tools and APIs instead of replacing the contractor’s whole stack. Give me the positioning, MVP, agent architecture, pricing, onboarding, 30-day GTM plan, excluded features, and the fastest path to $10k MRR. AI operating system for small HVAC companies doing residential service calls.” Trades are under-digitized, and construction/field services remain a major vertical AI opportunity because workflows are repetitive, fragmented, and still often manual
+
+## About
+
+Your New Business is an AI-powered business. This file provides a brief overview for
+language model crawlers and AI assistants.
+
+## Pages
+
+- /: Home — learn about Your New Business and get started
+- /blog: Blog — articles, updates, and insights
+- /blog/[slug]: Individual blog posts
+
+## Contact
+
+For inquiries, please visit our website.
