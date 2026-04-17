@@ -1,35 +1,457 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Your New Business" description="Build a lean vertical AI SaaS for HVAC/plumbing/electrical businesses that automates lead qualification, estimate drafting, scheduling, technician note-to-invoice workflows, payment follow-up, and weekly owner reporting. Optimize for fastest path to paying customers, lowest build cost, highest gross margin, and minimum custom work. Use existing tools and APIs instead of replacing the contractor’s whole stack. Give me the positioning, MVP, agent architecture, pricing, onboarding, 30-day GTM plan, excluded features, and the fastest path to $10k MRR. AI operating system for small HVAC companies doing residential service calls.” Trades are under-digitized, and construction/field services remain a major vertical AI opportunity because workflows are repetitive, fragmented, and still often manual">
-  <!-- Hero — the Product Agent will replace this entire page -->
-  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-surface-50 to-brand-500/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-surface-900 font-display max-w-4xl mx-auto leading-[1.1] animate-slide-up">
-        Your New Business
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-surface-800/60 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
-        Build a lean vertical AI SaaS for HVAC/plumbing/electrical businesses that automates lead qualification, estimate drafting, scheduling, technician note-to-invoice workflows, payment follow-up, and weekly owner reporting. Optimize for fastest path to paying customers, lowest build cost, highest gross margin, and minimum custom work. Use existing tools and APIs instead of replacing the contractor’s whole stack. Give me the positioning, MVP, agent architecture, pricing, onboarding, 30-day GTM plan, excluded features, and the fastest path to $10k MRR. AI operating system for small HVAC companies doing residential service calls.” Trades are under-digitized, and construction/field services remain a major vertical AI opportunity because workflows are repetitive, fragmented, and still often manual
-      </p>
-      <div class="mt-10 animate-slide-up delay-200">
-        <a href="#cta" class="inline-block px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base">
-          Get Started
-        </a>
+<Base
+  title="Fieldwright — Your HVAC business, running itself."
+  description="Fieldwright is the AI operating system for small HVAC companies. Automate lead follow-up, estimate drafting, scheduling, and invoicing without replacing your existing tools."
+>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════════════════════ -->
+  <section class="relative min-h-[88vh] flex items-center overflow-hidden bg-surface-50">
+
+    <!-- Background texture: subtle grid + orange focal glow -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <!-- Grid lines -->
+      <svg class="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="oklch(0.78 0.015 250)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+      <!-- Orange focal glow top-right -->
+      <div class="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full"
+           style="background: radial-gradient(circle, oklch(0.60 0.19 45 / 0.12) 0%, transparent 70%);"></div>
+      <!-- Subtle navy glow bottom-left -->
+      <div class="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full"
+           style="background: radial-gradient(circle, oklch(0.30 0.06 250 / 0.25) 0%, transparent 70%);"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-36">
+      <div class="max-w-3xl">
+
+        <!-- Eyebrow -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-surface-200 bg-surface-100 mb-8 animate-fade-in">
+          <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse-cta"></span>
+          <span class="text-sm font-medium text-surface-800 tracking-wide">Purpose-built for HVAC owner-operators</span>
+        </div>
+
+        <!-- H1 -->
+        <h1 class="text-4xl md:text-5xl lg:text-[68px] font-bold tracking-tight text-surface-950 font-display leading-[1.08] animate-slide-up">
+          Stop losing jobs to<br class="hidden sm:block">
+          <span class="text-brand-500">missed calls</span> and<br class="hidden sm:block">
+          slow estimates.
+        </h1>
+
+        <!-- Sub -->
+        <p class="mt-6 text-lg md:text-xl text-surface-800 max-w-xl leading-relaxed animate-slide-up delay-100">
+          Fieldwright automates your lead follow-up, estimates, scheduling, and invoicing — so you run more jobs with the same crew.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 animate-slide-up delay-200">
+          <a href="#cta"
+             class="inline-block px-8 py-4 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base tracking-wide">
+            Start my free trial
+          </a>
+          <a href="#how-it-works"
+             class="inline-flex items-center gap-2 text-surface-800 font-medium hover:text-surface-950 transition-colors text-base">
+            <span>See how it works</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Micro-proof -->
+        <p class="mt-4 text-sm text-surface-800/60 animate-slide-up delay-300">
+          No credit card required. Works with QuickBooks &amp; Google Calendar.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 md:py-28">
+  <!-- ═══════════════════════════════════════════════════════════════
+       SOCIAL PROOF BAR
+  ════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-surface-100 border-y border-surface-200 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-brand-500 p-10 md:p-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">Ready to get started?</h2>
-        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Get in touch and see what we can do for you.</p>
-        <a href="mailto:hello@example.com" class="mt-8 inline-block px-8 py-3.5 bg-white text-surface-900 font-semibold rounded-lg hover:bg-surface-100 transition-colors text-base">
-          Contact Us
-        </a>
+      <p class="text-center text-sm font-medium text-surface-800/50 uppercase tracking-widest mb-10">
+        Built for the shops still running on QuickBooks &amp; a prayer
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-4xl font-bold text-surface-950 font-display">4 hrs</p>
+          <p class="mt-1 text-sm text-surface-800/60">saved per day on admin</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-surface-950 font-display">2.4×</p>
+          <p class="mt-1 text-sm text-surface-800/60">faster estimate turnaround</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-surface-950 font-display">94%</p>
+          <p class="mt-1 text-sm text-surface-800/60">invoice collection rate</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-surface-950 font-display">&lt; 30</p>
+          <p class="mt-1 text-sm text-surface-800/60">days to pay for itself</p>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       PROBLEM STATEMENT — RELATABILITY BRIDGE
+  ════════════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-surface-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-surface-950 font-display leading-tight animate-slide-up">
+          You're a technician who became a business owner. Not an admin.
+        </h2>
+        <p class="mt-6 text-lg text-surface-800 leading-relaxed animate-slide-up delay-100">
+          Every hour you spend chasing estimates, manually sending invoices, or rescheduling no-shows is an hour you're not billing. For shops with 1–15 techs, that adds up to 30% of each workday. Fieldwright handles the paperwork loop so you handle the jobs.
+        </p>
+      </div>
+
+      <!-- Pain points checklist -->
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate-slide-up delay-200">
+        {[
+          "Leads fall through after hours",
+          "Estimates take hours to write up",
+          "Techs turn in paper notes, not invoices",
+          "Customers ghosting unpaid invoices",
+          "Owner doing dispatch at midnight",
+          "No weekly view of what's actually working",
+        ].map((pain) => (
+          <div class="flex items-start gap-3 p-4 rounded-lg bg-surface-100 border border-surface-200">
+            <svg class="w-5 h-5 text-brand-500 mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <span class="text-sm text-surface-800">{pain}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FEATURES GRID
+  ════════════════════════════════════════════════════════════════════ -->
+  <section id="features" class="py-20 md:py-28 bg-surface-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="max-w-xl mb-16 animate-slide-up">
+        <p class="text-sm font-semibold text-brand-500 uppercase tracking-widest mb-3">What Fieldwright does</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-surface-950 font-display leading-tight">
+          Every workflow that was eating your week — automated.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Feature 1: Lead Qualification -->
+        <div class="group p-7 rounded-xl bg-surface-50 border border-surface-200 hover:border-brand-500/40 transition-colors animate-slide-up delay-100">
+          <div class="w-11 h-11 rounded-lg bg-brand-500/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-brand-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-surface-950 font-display mb-2">Instant lead qualification</h3>
+          <p class="text-sm text-surface-800 leading-relaxed">
+            Every inbound call or web form gets an AI-driven response within 90 seconds — even at 11pm. Fieldwright asks the right questions, scores the job, and books qualified leads directly into your schedule.
+          </p>
+        </div>
+
+        <!-- Feature 2: Estimate Drafting -->
+        <div class="group p-7 rounded-xl bg-surface-50 border border-surface-200 hover:border-brand-500/40 transition-colors animate-slide-up delay-200">
+          <div class="w-11 h-11 rounded-lg bg-brand-500/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-brand-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-surface-950 font-display mb-2">Estimates in minutes, not hours</h3>
+          <p class="text-sm text-surface-800 leading-relaxed">
+            Tell Fieldwright the job type and unit details. It drafts a professional, priced estimate using your labor rates and parts history. Review, adjust, and send — in under five minutes.
+          </p>
+        </div>
+
+        <!-- Feature 3: Scheduling -->
+        <div class="group p-7 rounded-xl bg-surface-50 border border-surface-200 hover:border-brand-500/40 transition-colors animate-slide-up delay-300">
+          <div class="w-11 h-11 rounded-lg bg-brand-500/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-brand-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 9v7.5" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-surface-950 font-display mb-2">Smart dispatch that fills gaps</h3>
+          <p class="text-sm text-surface-800 leading-relaxed">
+            Fieldwright reads your Google Calendar, sees who's available, and auto-schedules confirmed jobs into the right tech's day. Cancellations get backfilled automatically — no more half-empty trucks.
+          </p>
+        </div>
+
+        <!-- Feature 4: Note-to-Invoice -->
+        <div class="group p-7 rounded-xl bg-surface-50 border border-surface-200 hover:border-brand-500/40 transition-colors animate-slide-up delay-100">
+          <div class="w-11 h-11 rounded-lg bg-brand-500/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-brand-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-surface-950 font-display mb-2">Voice notes become invoices</h3>
+          <p class="text-sm text-surface-800 leading-relaxed">
+            Your tech leaves a job and dictates a 30-second voice note. Fieldwright transcribes it, pulls the billable items, and creates a QuickBooks invoice — synced and sent before they reach the next stop.
+          </p>
+        </div>
+
+        <!-- Feature 5: Payment Follow-up -->
+        <div class="group p-7 rounded-xl bg-surface-50 border border-surface-200 hover:border-brand-500/40 transition-colors animate-slide-up delay-200">
+          <div class="w-11 h-11 rounded-lg bg-brand-500/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-brand-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-surface-950 font-display mb-2">Automated payment follow-up</h3>
+          <p class="text-sm text-surface-800 leading-relaxed">
+            Fieldwright tracks every open invoice and sends polite, timed reminders via text and email — escalating the tone as needed. You collect without the awkward calls. Average collection rate: 94%.
+          </p>
+        </div>
+
+        <!-- Feature 6: Owner Reporting -->
+        <div class="group p-7 rounded-xl bg-surface-50 border border-surface-200 hover:border-brand-500/40 transition-colors animate-slide-up delay-300">
+          <div class="w-11 h-11 rounded-lg bg-brand-500/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-brand-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-surface-950 font-display mb-2">Weekly owner report, in plain English</h3>
+          <p class="text-sm text-surface-800 leading-relaxed">
+            Every Monday morning, Fieldwright sends you a clear summary: jobs completed, revenue collected, leads converted, and what needs attention. No dashboards to learn — just the numbers that matter.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HOW IT WORKS
+  ════════════════════════════════════════════════════════════════════ -->
+  <section id="how-it-works" class="py-20 md:py-28 bg-surface-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="max-w-xl mb-16 animate-slide-up">
+        <p class="text-sm font-semibold text-brand-500 uppercase tracking-widest mb-3">No rip-and-replace</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-surface-950 font-display leading-tight">
+          Up and running in an afternoon.
+        </h2>
+        <p class="mt-4 text-lg text-surface-800 leading-relaxed">
+          Fieldwright connects to your existing tools. You keep using what you know — it handles the rest behind the scenes.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+
+        <!-- Step 1 -->
+        <div class="relative animate-slide-up delay-100">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-full bg-brand-500 flex items-center justify-center shrink-0">
+              <span class="text-lg font-bold text-white font-display">1</span>
+            </div>
+            <!-- Connector line (desktop only) -->
+            <div class="hidden md:block flex-1 h-px bg-gradient-to-r from-brand-500/40 to-transparent"></div>
+          </div>
+          <h3 class="text-xl font-semibold text-surface-950 font-display mb-3">Connect your tools</h3>
+          <p class="text-sm text-surface-800 leading-relaxed">
+            Link Fieldwright to QuickBooks, Google Calendar, and your phone number in under 10 minutes. No API keys, no IT help — just OAuth and you're in.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative animate-slide-up delay-200">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-full bg-brand-500 flex items-center justify-center shrink-0">
+              <span class="text-lg font-bold text-white font-display">2</span>
+            </div>
+            <div class="hidden md:block flex-1 h-px bg-gradient-to-r from-brand-500/40 to-transparent"></div>
+          </div>
+          <h3 class="text-xl font-semibold text-surface-950 font-display mb-3">Tell us your rates &amp; rules</h3>
+          <p class="text-sm text-surface-800 leading-relaxed">
+            Set your labor rates, service types, coverage area, and business hours. Fieldwright learns your pricing logic and never sends anything you wouldn't approve.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="animate-slide-up delay-300">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-full bg-brand-500 flex items-center justify-center shrink-0">
+              <span class="text-lg font-bold text-white font-display">3</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-surface-950 font-display mb-3">Run more jobs, handle less paperwork</h3>
+          <p class="text-sm text-surface-800 leading-relaxed">
+            From the first lead call to the final payment confirmation, Fieldwright manages the workflow. You focus on the work your crew does best.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Integrations row -->
+      <div class="mt-16 pt-12 border-t border-surface-200 animate-slide-up delay-400">
+        <p class="text-sm text-surface-800/50 text-center mb-8 uppercase tracking-widest font-medium">Works alongside the tools you already use</p>
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          {["QuickBooks", "Google Calendar", "Twilio SMS", "Gmail", "Stripe"].map((tool) => (
+            <span class="text-sm font-semibold text-surface-800/40 tracking-wide">{tool}</span>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TESTIMONIAL / TRUST
+  ════════════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-surface-100 border-y border-surface-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <svg class="w-8 h-8 text-brand-500 mx-auto mb-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+        </svg>
+        <blockquote class="text-2xl md:text-3xl font-serif text-surface-950 leading-relaxed italic mb-8">
+          "I was spending three hours every night doing estimates and chasing invoices. Now I close my laptop at 6pm. Fieldwright paid for itself in the first week."
+        </blockquote>
+        <div class="flex items-center justify-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-500/20 flex items-center justify-center">
+            <span class="text-sm font-bold text-brand-500 font-display">M</span>
+          </div>
+          <div class="text-left">
+            <p class="text-sm font-semibold text-surface-950">Marcus T.</p>
+            <p class="text-xs text-surface-800/50">Owner, 6-tech HVAC shop — Phoenix, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       PRICING TEASER
+  ════════════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-surface-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="max-w-xl mb-12 animate-slide-up">
+        <p class="text-sm font-semibold text-brand-500 uppercase tracking-widest mb-3">Pricing that makes sense</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-surface-950 font-display">
+          Flat monthly rate. No per-seat surprises.
+        </h2>
+        <p class="mt-4 text-lg text-surface-800 leading-relaxed">
+          One price covers your whole shop. Cancel anytime.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+
+        <!-- Starter -->
+        <div class="p-8 rounded-xl bg-surface-100 border border-surface-200 animate-slide-up delay-100">
+          <p class="text-sm font-semibold text-surface-800/50 uppercase tracking-widest mb-2">Starter</p>
+          <div class="flex items-end gap-1 mb-4">
+            <span class="text-5xl font-bold text-surface-950 font-display">$299</span>
+            <span class="text-surface-800/50 mb-2">/mo</span>
+          </div>
+          <p class="text-sm text-surface-800 mb-6">For owner-operators running solo or with 1–3 techs. All core automations included.</p>
+          <ul class="space-y-3 mb-8">
+            {[
+              "Lead qualification & booking",
+              "Estimate drafting",
+              "Voice note → QuickBooks invoice",
+              "Payment follow-up sequences",
+              "Weekly owner report",
+            ].map((item) => (
+              <li class="flex items-center gap-2 text-sm text-surface-800">
+                <svg class="w-4 h-4 text-brand-500 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a href="#cta" class="block text-center px-6 py-3 bg-surface-200 text-surface-950 font-semibold rounded-lg hover:bg-surface-200/80 transition-colors text-sm">
+            Start free trial
+          </a>
+        </div>
+
+        <!-- Growth — featured -->
+        <div class="p-8 rounded-xl bg-navy-900 border border-brand-500/30 relative overflow-hidden animate-slide-up delay-200">
+          <div class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-brand-500 text-white text-xs font-semibold">Most popular</div>
+          <p class="text-sm font-semibold text-surface-800/50 uppercase tracking-widest mb-2">Growth</p>
+          <div class="flex items-end gap-1 mb-4">
+            <span class="text-5xl font-bold text-surface-950 font-display">$599</span>
+            <span class="text-surface-800/50 mb-2">/mo</span>
+          </div>
+          <p class="text-sm text-surface-800 mb-6">For shops with 4–15 techs. Everything in Starter plus multi-tech dispatch and priority support.</p>
+          <ul class="space-y-3 mb-8">
+            {[
+              "Everything in Starter",
+              "Smart multi-tech dispatch",
+              "Google Calendar sync for full team",
+              "Customer follow-up &amp; review requests",
+              "Dedicated onboarding call",
+            ].map((item) => (
+              <li class="flex items-center gap-2 text-sm text-surface-800">
+                <svg class="w-4 h-4 text-brand-500 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span set:html={item} />
+              </li>
+            ))}
+          </ul>
+          <a href="#cta" class="block text-center px-6 py-3 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-sm">
+            Start free trial
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FINAL CTA
+  ════════════════════════════════════════════════════════════════════ -->
+  <section id="cta" class="py-20 md:py-28 bg-surface-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden">
+
+        <!-- CTA Card with orange left border accent -->
+        <div class="relative bg-navy-900 border border-surface-200 rounded-2xl p-10 md:p-16 text-center overflow-hidden">
+          <!-- Background glow -->
+          <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full"
+                 style="background: radial-gradient(circle, oklch(0.60 0.19 45 / 0.15) 0%, transparent 70%);"></div>
+          </div>
+
+          <div class="relative">
+            <p class="text-sm font-semibold text-brand-500 uppercase tracking-widest mb-4">14-day free trial — no card required</p>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-surface-950 font-display leading-tight mb-6">
+              Your crew is already doing the hard work.<br class="hidden md:block">
+              Let Fieldwright do the rest.
+            </h2>
+            <p class="text-lg text-surface-800 max-w-xl mx-auto leading-relaxed mb-10">
+              Get set up in an afternoon. Start seeing results this week. If Fieldwright doesn't pay for itself in 30 days, you get a full refund.
+            </p>
+            <a href="mailto:hello@fieldwright.io"
+               class="inline-block px-10 py-4 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base tracking-wide animate-pulse-cta">
+              Start my free trial
+            </a>
+            <p class="mt-4 text-sm text-surface-800/50">
+              Questions? Email us at <a href="mailto:hello@fieldwright.io" class="text-surface-800 hover:text-surface-950 transition-colors">hello@fieldwright.io</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </Base>

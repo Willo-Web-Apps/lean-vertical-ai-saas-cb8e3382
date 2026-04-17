@@ -1,11 +1,57 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-surface-200 py-10 mt-auto">
+<footer class="border-t border-surface-200 bg-surface-50 pt-14 pb-10 mt-auto">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm font-semibold text-surface-900 font-display">Your New Business</p>
-      <p class="text-sm text-surface-800/50">&copy; {year} Your New Business. All rights reserved.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+
+      <!-- Brand column -->
+      <div class="md:col-span-2">
+        <a href="/" class="inline-flex items-center gap-2.5 mb-4">
+          <div class="w-8 h-8 rounded-md bg-brand-500 flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+            </svg>
+          </div>
+          <span class="text-lg font-bold tracking-tight text-surface-950 font-display">Fieldwright</span>
+        </a>
+        <p class="text-sm text-surface-800/60 leading-relaxed max-w-xs">
+          The AI operating system for small HVAC companies. Automate the workflows that drain your day — without replacing the tools you already use.
+        </p>
+        <p class="mt-4 text-xs text-surface-800/40">
+          Works with QuickBooks · Google Calendar · Stripe · Gmail
+        </p>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <p class="text-xs font-semibold text-surface-800/40 uppercase tracking-widest mb-4">Product</p>
+        <ul class="space-y-3">
+          <li><a href="#features" class="text-sm text-surface-800/60 hover:text-surface-950 transition-colors">Features</a></li>
+          <li><a href="#how-it-works" class="text-sm text-surface-800/60 hover:text-surface-950 transition-colors">How it works</a></li>
+          <li><a href="#cta" class="text-sm text-surface-800/60 hover:text-surface-950 transition-colors">Pricing</a></li>
+          <li><a href="/blog" class="text-sm text-surface-800/60 hover:text-surface-950 transition-colors">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <p class="text-xs font-semibold text-surface-800/40 uppercase tracking-widest mb-4">Company</p>
+        <ul class="space-y-3">
+          <li><a href="mailto:hello@fieldwright.io" class="text-sm text-surface-800/60 hover:text-surface-950 transition-colors">Contact</a></li>
+          <li><a href="mailto:hello@fieldwright.io" class="text-sm text-surface-800/60 hover:text-surface-950 transition-colors">Support</a></li>
+          <li><a href="#" class="text-sm text-surface-800/60 hover:text-surface-950 transition-colors">Privacy</a></li>
+          <li><a href="#" class="text-sm text-surface-800/60 hover:text-surface-950 transition-colors">Terms</a></li>
+        </ul>
+      </div>
+
     </div>
+
+    <div class="pt-8 border-t border-surface-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <p class="text-xs text-surface-800/40">&copy; {year} Fieldwright. All rights reserved.</p>
+      <p class="text-xs text-surface-800/30">Built for owner-operators, not enterprise IT departments.</p>
+    </div>
+
   </div>
 </footer>

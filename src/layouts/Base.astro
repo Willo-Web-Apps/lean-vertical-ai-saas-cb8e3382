@@ -8,7 +8,10 @@ interface Props {
   description?: string;
 }
 
-const { title = "Your New Business", description = "Build a lean vertical AI SaaS for HVAC/plumbing/electrical businesses that automates lead qualification, estimate drafting, scheduling, technician note-to-invoice workflows, payment follow-up, and weekly owner reporting. Optimize for fastest path to paying customers, lowest build cost, highest gross margin, and minimum custom work. Use existing tools and APIs instead of replacing the contractor’s whole stack. Give me the positioning, MVP, agent architecture, pricing, onboarding, 30-day GTM plan, excluded features, and the fastest path to $10k MRR. AI operating system for small HVAC companies doing residential service calls.” Trades are under-digitized, and construction/field services remain a major vertical AI opportunity because workflows are repetitive, fragmented, and still often manual" } = Astro.props;
+const {
+  title = "Fieldwright — Your HVAC business, running itself.",
+  description = "Fieldwright is the AI operating system for small HVAC companies. Automate lead qualification, estimate drafting, scheduling, and invoicing — without replacing your existing tools."
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -18,14 +21,15 @@ const { title = "Your New Business", description = "Build a lean vertical AI Saa
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
     <title>{title}</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Your New Business",
-      "description": "Build a lean vertical AI SaaS for HVAC/plumbing/electrical businesses that automates lead qualification, estimate drafting, scheduling, technician note-to-invoice workflows, payment follow-up, and weekly owner reporting. Optimize for fastest path to paying customers, lowest build cost, highest gross margin, and minimum custom work. Use existing tools and APIs instead of replacing the contractor’s whole stack. Give me the positioning, MVP, agent architecture, pricing, onboarding, 30-day GTM plan, excluded features, and the fastest path to $10k MRR. AI operating system for small HVAC companies doing residential service calls.” Trades are under-digitized, and construction/field services remain a major vertical AI opportunity because workflows are repetitive, fragmented, and still often manual",
-      "url": "https://lean-vertical-ai-saas.onrender.com"
+      "name": "Fieldwright",
+      "description": "AI operating system for small HVAC companies. Automates lead qualification, estimate drafting, scheduling, invoicing, and owner reporting.",
+      "url": "https://fieldwright.io"
     }
     </script>
   </head>
